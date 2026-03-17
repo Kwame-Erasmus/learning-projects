@@ -10,14 +10,12 @@ hostname switch-1
 ## Configure password on console management line/port
 put password on the console management port
 
-After this, connection to the console management port will require password to enter the user EXEC mode
-
-- console line 0
-
-- password password
-
-- login
-  ***
+After this, connection to the console management port will require password to enter the user EXEC mode<br>
+```
+line console 0
+password password_here
+login
+```
   ## Secure privilege EXEC mode with password
   - enable secret password
 
