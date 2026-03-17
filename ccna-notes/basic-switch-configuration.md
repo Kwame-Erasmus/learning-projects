@@ -44,6 +44,12 @@ This ensures that only authorized users can access administrative commands.
 ## Secure Virtual Terminal Lines(vty) Remote access to the switch
 To be able to access the switch remotely using ssh, we need to secure this channel of communication<br>
 with a password
+```
+line vty 0 15
+password password_goes_here
+login
+exit
+```
 
 ## Example of Basic Initial Configuration
 
