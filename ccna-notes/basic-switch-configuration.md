@@ -3,33 +3,68 @@
 ## Objective
 Learn how to perform basic configuration on a network switch.
 
-## Device name
-hostname switch-1
-***
+---
 
-## Configure password on console management line/port
-put password on the console management port
+## Set Device Name
 
-After this, connection to the console management port will require password to enter the user EXEC mode<br>
+Configure a hostname to easily identify the switch on the network.
+
+```
+enable
+configure terminal
+hostname Switch-1
+```
+
+---
+
+## Configure Password on Console Management Port
+
+This secures access to the switch through the console port.  
+Users must enter a password before accessing **User EXEC mode**.
+
 ```
 line console 0
 password password_here
 login
 ```
-  ## Secure privilege EXEC mode with password
-  - enable secret password
 
+---
 
-- Enter global configuration mode
+## Secure Privileged EXEC Mode
 
-configure terminal / config t
+To protect **Privileged EXEC mode**, configure an encrypted password using the `enable secret` command.
 
-- hostname
+```
+enable secret your_password_here
+```
+
+This ensures that only authorized users can access administrative commands.
+
+---
+
+## Example of Basic Initial Configuration
+
+Below is a simple example combining some basic switch configuration commands.
+
+```
+enable
+configure terminal
 
 hostname S1
-
-- Secure console access
 
 line console 0
 password cisco
 login
+
+enable secret class
+```
+
+---
+
+## Summary
+
+In this configuration we:
+
+- Set the switch hostname
+- Secured console access with a password
+- Protected privileged EXEC mode with an enable secret
