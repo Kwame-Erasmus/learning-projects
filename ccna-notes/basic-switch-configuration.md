@@ -50,6 +50,9 @@ password password_goes_here
 login
 exit
 ```
+---
+## Encrypt password
+The start-up file running displays passwords in plain text so it will be proper we encrypt this information
 
 ## Example of Basic Initial Configuration
 
